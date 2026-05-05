@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocky Mountain National Park</title>
+
+ <!-- Google Font -->
+
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+ <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f7;
+      color: #2c3e50;
+    }
+
+    header {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1f2a36;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover { background: #16a085; }
+
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 { margin-top: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ecf0f1;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: scale(1.05); }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content { padding: 15px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover { transform: scale(1.08); }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f2a36;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>Rocky Mountain National Park</h1>
+  <p>Adventure Awaits Above the Clouds</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#attractions">Attractions</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#visit">Visit</a>
+</nav>
+
+<section id="about">
+  <h2>About the Park</h2>
+  <p>Rocky Mountain National Park is a breathtaking destination filled with towering peaks, alpine lakes, and wildlife. Established in 1915, it spans over 415 square miles.</p>
+</section>
+
+<section id="attractions">
+  <h2>Top Attractions</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Trail Ridge Road">
+      <div class="card-content">
+        <h3>Trail Ridge Road</h3>
+        <p>Drive above the clouds on one of the highest roads in North America.</p>
+      </div>
+    </div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Bear Lake">
+  <div class="card-content">
+    <h3>Bear Lake</h3>
+    <p>Crystal-clear water surrounded by mountain peaks.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1508264165352-258a6b5e94a4" alt="Longs Peak">
+  <div class="card-content">
+    <h3>Longs Peak</h3>
+    <p>A challenging 14,259-foot summit for experienced hikers.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Moraine Park">
+  <div class="card-content">
+    <h3>Moraine Park</h3>
+    <p>Perfect place to see elk and wildlife in open meadows.</p>
+  </div>
+</div>
+ </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+  </div>
+</section>
+
+<section id="formation">
+  <h2>How the Rocky Mountains Were Formed</h2>
+  <p>The Rocky Mountains were formed over 70 million years ago during a major geological event called the Laramide Orogeny. This process involved powerful tectonic forces that pushed large sections of the Earth's crust upward, creating the mountain ranges we see today.</p>
+
+ <p>Over millions of years, glaciers, wind, and water shaped the landscape. During the last Ice Age, massive glaciers carved out valleys, lakes, and sharp peaks. As the glaciers melted, they left behind the dramatic terrain that defines Rocky Mountain National Park today.</p>
+
+ <p>You can still see evidence of this history throughout the park, including U-shaped valleys, glacial lakes like Bear Lake, and jagged mountain ridges formed by erosion.</p>
+</section>
+
+<section id="visit">
+  <h2>Visitor Info</h2>
+  <p><strong>Fee:</strong> $30 per vehicle</p>
+  <p><strong>Best Time:</strong> Summer & Fall</p>
+  <p><strong>Tip:</strong> Bring layers and arrive early</p>
+</section>
+
+<footer>
+  <p>© 2026 Rocky Mountain National Park</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        sec.classList.add('show');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
